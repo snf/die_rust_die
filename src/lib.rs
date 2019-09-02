@@ -23,7 +23,7 @@ pub fn heap_oob_read() {
     let mut v = Vec::new();
     v.push(10);
 
-    let s = unsafe { slice::from_raw_parts(v.as_ptr(), 100) };
+    let s = unsafe { slice::from_raw_parts(v.as_ptr(), 100000) };
 
-    println!("{}", s[99]);
+    println!("{}", s[9900]);
 }
